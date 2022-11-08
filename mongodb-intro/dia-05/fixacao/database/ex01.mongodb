@@ -1,0 +1,10 @@
+//Exercício 1: Adicione a categoria "superhero" ao filme Batman.
+use('cinema');
+db.movies.updateOne(
+  { title: "Batman" },
+  {
+    $push: { category: "superhero" }
+  }
+)
+// use('cinema')
+// db.movies.find({title: "Batman"}).pretty();
